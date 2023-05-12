@@ -6,27 +6,27 @@ import 'package:http/http.dart' as http;
 
 class VTImageView extends StatelessWidget {
   final String videoUrl;
-  final double? width;
+  final double width;
 
-  final double? height;
+  final double height;
 
   final double scale;
-  final ImageFrameBuilder? frameBuilder;
+  final ImageFrameBuilder frameBuilder;
 
-  final ImageErrorWidgetBuilder? errorBuilder;
+  final ImageErrorWidgetBuilder errorBuilder;
 
-  final String? semanticLabel;
+  final String semanticLabel;
 
   final bool excludeFromSemantics;
 
-  final Color? color;
+  final Color color;
 
-  final BlendMode? colorBlendMode;
+  final BlendMode colorBlendMode;
 
-  final BoxFit? fit;
+  final BoxFit fit;
   final AlignmentGeometry alignment;
   final ImageRepeat repeat;
-  final Rect? centerSlice;
+  final Rect centerSlice;
 
   final bool matchTextDirection;
 
@@ -43,13 +43,13 @@ class VTImageView extends StatelessWidget {
   /// bilinear interpolation, or the [FilterQuality.none] which corresponds
   /// to nearest-neighbor.
   final FilterQuality filterQuality;
-  final int? cacheWidth;
-  final int? cacheHeight;
+  final int cacheWidth;
+  final int cacheHeight;
   final String assetPlaceHolder;
 
   const VTImageView({
-    Key? key,
-    required this.videoUrl,
+    Key key,
+    @required this.videoUrl,
     this.width,
     this.height,
     this.scale: 1.0,
@@ -69,7 +69,7 @@ class VTImageView extends StatelessWidget {
     this.filterQuality: FilterQuality.low,
     this.cacheHeight,
     this.cacheWidth,
-    required this.assetPlaceHolder,
+    @required this.assetPlaceHolder,
   })  : assert(videoUrl != null),
         super(key: key);
 
